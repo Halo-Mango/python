@@ -23,10 +23,10 @@ class Test:
         self.tv1.volume_up()
         self.tv1.volume_up()
         self.tv1.mute()
-        assert self.tv1._muted is True
+        assert self.tv1.__str__() == 'Power = True, Channel = 0, Volume = 0'
 
         self.tv1.mute()
-        assert self.tv1._muted is False
+        assert self.tv1.__str__() == 'Power = True, Channel = 0, Volume = 2'
 
     def test_channel_up(self):
         self.tv1.channel_up()
